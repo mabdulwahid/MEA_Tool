@@ -59,8 +59,7 @@
             this.checkedListBox1.Items.AddRange(new object[] {
             "Passenger Count",
             "Number of Generators",
-            "Power",
-            "Bleed Flow"});
+            "Power"});
             this.checkedListBox1.Location = new System.Drawing.Point(51, 195);
             this.checkedListBox1.Name = "checkedListBox1";
             this.checkedListBox1.Size = new System.Drawing.Size(120, 94);
