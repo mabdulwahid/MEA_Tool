@@ -25,7 +25,7 @@ namespace MEA_Test
                 "Calculation Method 2", "Calculation Method 3" };
 
             
-
+            //inserting calculation method options for the output combo boxes
             foreach (Control control in groupBox2.Controls)
             {
                 ComboBox calcLabel = control as ComboBox;
@@ -35,28 +35,9 @@ namespace MEA_Test
                     calcLabel.Items.AddRange(calcMethod);
                 }
             }
+                        
 
-            /*foreach (Control control1 in backgroundPanel.Controls)
-            {
-                GroupBox hideGroup = control1 as GroupBox;                             
-
-                if (hideGroup != null)
-                {
-                    foreach (Control control2 in hideGroup.Controls)
-                    {
-                        CheckBox boxChecked = control2 as CheckBox;
-
-                        if (boxChecked != null)
-                        {
-                            if (boxChecked.Checked == true)
-                                //
-                        }
-                    }
-                }
-            }*/
-
-            
-
+            //options for input combo boxes
             comboBox8.Items.Add("Aircraft");
             comboBox9.Items.Add("Aircraft");
             comboBox10.Items.Add("Aircraft");
@@ -73,6 +54,7 @@ namespace MEA_Test
             InitializeComboBox();
         }
 
+        //attempt to make a calculation method
         private void CalculationMethod()
         {
             
@@ -89,6 +71,7 @@ namespace MEA_Test
             EPSCurrent = Convert.ToInt32(textBox1.Text);
         }
 
+        //when input box checked, enable/disable textboxes and comboboxes in EPS
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
             if (checkBox1.Checked == true)
@@ -130,35 +113,8 @@ namespace MEA_Test
                 comboBox10.Enabled = true;
             }
         }
-
-        /*private void checkBox4_CheckedChanged(object sender, EventArgs e)
-        {
-            if (checkBox4.Checked == true)
-            {
-                textBox4.Enabled = true;
-                comboBox11.Enabled = false;
-            }
-            else
-            {
-                textBox4.Enabled = false;
-                comboBox11.Enabled = true;
-            }
-        }
-
-        private void checkBox5_CheckedChanged(object sender, EventArgs e)
-        {
-            if (checkBox5.Checked == true)
-            {
-                textBox5.Enabled = true;
-                comboBox12.Enabled = false;
-            }
-            else
-            {
-                textBox5.Enabled = false;
-                comboBox12.Enabled = true;
-            }
-        }*/
-
+        
+        //hardcode example for EPS parameter
         private void comboBox10_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (comboBox10.Text == "Aircraft")
@@ -167,9 +123,11 @@ namespace MEA_Test
             }
         }
 
+        //when the button is pressed
         private void button1_Click(object sender, EventArgs e)
         {
             
+            //Aircraft Passenger Parameter test
             int paxCountUser = Convert.ToInt32(textBox12.Text);
 
             Airplane plane = new Airplane(paxCountUser);
@@ -184,6 +142,7 @@ namespace MEA_Test
             }
 
             
+            //when the button is pressed, automatically state the first calculation method
             comboBox2.SelectedIndex = comboBox2.Items.IndexOf("Calculation Method 1");
             comboBox3.SelectedIndex = comboBox3.Items.IndexOf("Calculation Method 1");
             comboBox4.SelectedIndex = comboBox4.Items.IndexOf("Calculation Method 1");
@@ -198,6 +157,7 @@ namespace MEA_Test
             label13.Text = "2 mil";
         }
 
+        //expand/collapes subsystem panels
         private void label1_Click(object sender, EventArgs e)
         {
             if (epsPanel.Visible == true)
@@ -258,8 +218,9 @@ namespace MEA_Test
         private void Form1_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'database2DataSet.Parameter_Def' table. You can move, or remove it, as needed.
-            this.parameter_DefTableAdapter.Fill(this.database2DataSet.Parameter_Def);
+            
 
         }
+
     }
 }

@@ -361,8 +361,6 @@
             this.label165 = new System.Windows.Forms.Label();
             this.label166 = new System.Windows.Forms.Label();
             this.backgroundPanel = new System.Windows.Forms.Panel();
-            this.database2DataSet = new MEA_Test.Database2DataSet();
-            this.parameter_DefTableAdapter = new MEA_Test.Database2DataSetTableAdapters.Parameter_DefTableAdapter();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -386,7 +384,6 @@
             this.groupBox12.SuspendLayout();
             this.groupBox13.SuspendLayout();
             this.backgroundPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.database2DataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // epsLabel
@@ -3819,15 +3816,6 @@
             this.backgroundPanel.Size = new System.Drawing.Size(854, 655);
             this.backgroundPanel.TabIndex = 35;
             // 
-            // database2DataSet
-            // 
-            this.database2DataSet.DataSetName = "Database2DataSet";
-            this.database2DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // parameter_DefTableAdapter
-            // 
-            this.parameter_DefTableAdapter.ClearBeforeFill = true;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -3876,7 +3864,6 @@
             this.groupBox13.PerformLayout();
             this.backgroundPanel.ResumeLayout(false);
             this.backgroundPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.database2DataSet)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -4216,8 +4203,6 @@
         private System.Windows.Forms.Label label169;
         private System.Windows.Forms.Label label170;
         private System.Windows.Forms.ComboBox comboBox7;
-        private Database2DataSet database2DataSet;
-        private Database2DataSetTableAdapters.Parameter_DefTableAdapter parameter_DefTableAdapter;
     }
 }
 
